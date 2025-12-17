@@ -1,6 +1,6 @@
 These are js coding problems
 
-##Reverse a string
+## 1. Reverse a string
 
 
 const reverseString = str => str.split("").reverse().join("");
@@ -24,3 +24,40 @@ function reverseString (word){
     
 }
 console.log(reverseString("word"));
+---------------------
+====================================================================
+
+## 2. Vowels count
+
+const v = ["a", "e", "i", "o", "u"];
+    function countV(word){
+        let count = 0;
+        for(let i of word.toLowerCase()){
+            if(v.includes(i)){ 
+                count++; 
+            }
+        }
+        return count;
+    }
+console.log(countV("hello"));
+
+====================================================================
+
+## 3. Palindrome 
+
+function isP(word){
+    let j = word.length- 1;
+    for(let i=0; i < word.length / 2; i++){
+        if(word[i] != word[j]){
+            return false;
+        }
+        j--;
+    }
+
+    return true;
+}
+console.log(isP("121"));
+
+====================================================================
+## 4. 
+
