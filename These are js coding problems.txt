@@ -59,5 +59,21 @@ function isP(word){
 console.log(isP("121"));
 
 ====================================================================
-## 4. 
+## 4. largest number in array
+const num1 = [10, 15, 18, 15, 23, 55];
+
+function findLargest (arr){
+    if(arr.length === 0 ) return null;
+    
+    let largest = arr[0];
+    
+    for (let i = 1; i < arr.length; i++){
+        if(largest < arr[i]){
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+console.log(findLargest(num1));
 
