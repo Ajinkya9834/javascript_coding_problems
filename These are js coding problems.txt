@@ -77,3 +77,28 @@ function findLargest (arr){
 
 console.log(findLargest(num1));
 
+====================================================================
+## 5. second largest number in array
+function secondLargest(arr) {
+  if (arr.length < 2) return null;
+
+  let largest = -Infinity;
+  let second = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      second = largest;
+      largest = arr[i];
+    } else if (arr[i] > second && arr[i] !== largest) {
+      second = arr[i];
+    }
+  }
+
+  return second === -Infinity ? null : second;
+}
+
+// Examples
+console.log(secondLargest([10, 5, 20, 8]));    // 10
+console.log(secondLargest([10, 10, 9]));       // 9
+console.log(secondLargest([5, 5, 5]));         // null
+
